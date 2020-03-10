@@ -1,6 +1,9 @@
 use ctspune;
+
 create  table account_master(account_number varchar(6) primary key,customer_number varchar(6),
-branch_id varchar(6),opening_balance int,account_opening_date date, customer_type varchar(10), account_status varchar(10),
+
+branch_id varchar(6),opening_balance int,account_opening_date date, 
+customer_type varchar(10), account_status varchar(10),
 foreign key (customer_number) references customer_master(customer_number),
 foreign key(branch_id) references branch_master(branch_id));
 iNSERT INTO account_master values(123123,121,1001,1200,"2019-06-23","Premeium","Active");
